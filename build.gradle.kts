@@ -30,7 +30,7 @@ dependencies {
     runtimeOnly("com.h2database:h2")
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
     // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api-kotlin
-    runtimeOnly("org.apache.logging.log4j:log4j-api-kotlin:1.3.0")
+    runtimeOnly("org.apache.logging.log4j:log4j-api-kotlin:1.4.0")
     kapt("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "mockito-core")
