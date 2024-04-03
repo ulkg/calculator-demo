@@ -1,0 +1,59 @@
+{{> header}}
+
+<div class="jumbotron">
+    <div class="container">
+        {{#banner.title}}
+        <div class="alert alert-info" role="alert">
+            <h4 class="alert-heading">{{banner.title}}</h4>
+            <p>{{banner.content}}</p>
+        </div>
+        {{/banner.title}}
+        <h1 class="display-3">{{title}}</h1>
+        <p class="lead">Demo für eine Webapplikation mit Berechnungslogik</p>
+        <hr class="my-4">
+        <p>Berechnen Sie hier ihren Strompreis basierend auf dem Jahresverbrauch!</p>
+        <p class="lead">
+            <a class="btn btn-secondary btn-lg" href="https://www.wienenergie.at/privat/produkte/strom/" target="_blank" role="button">Strompreise bei
+                Wien Energie vergleichen!</a>
+        </p>
+        <form action="/calculate" method="get">
+            <div class="form-group">
+                <label for="yearlyPowerConsumption">Jahresstromverbrauch in kWh</label>
+                <input type="number" class="form-control" name="yearlyPowerConsumption" id="yearlyPowerConsumption" aria-describedby="help" placeholder="z.B. 3000" required>
+                <small id="help" class="form-text text-muted">Wir geben Ihre persönlichen Daten nicht weiter.</small>
+            </div>
+            <div class="form-group">
+                <label for="price">Preis pro kWh in Cent</label>
+                <input type="number" step=".01" class="form-control" name="price" id="price" placeholder="z.B. 17" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="calculateButton">Submit</button>
+        </form>
+        {{#totalCost}}
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Jährliche Kosten</h4>
+                <p id="result">{{totalCost}} &#8364;</p>
+            </div>
+        {{/totalCost}}
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        {{#companies}}
+        <div class="col-md-6">
+            <div class="col">
+                <h2>{{title}}</h2>
+                <p>{{description}}</p>
+                <p>
+                    <a class="btn btn-secondary" href="/company/{{href}}" role="button">
+                        View details <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+        {{/companies}}
+    </div>
+    <hr>
+    {{> footer}}
+</div>
