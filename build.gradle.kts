@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "3.1.4"
     id("io.spring.dependency-management") version "1.1.3"
-    id("com.microsoft.azure.azurewebapp") version "1.8.1"
+    id("com.microsoft.azure.azurewebapp") version "1.10.0"
     id("de.undercouch.download") version "5.5.0"
     kotlin("jvm") version "1.8.22"
     kotlin("plugin.spring") version "1.8.22"
