@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.de.undercouch.gradle.tasks.download.Download
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "3.1.4"
+    id("org.springframework.boot") version "3.3.1"
     id("io.spring.dependency-management") version "1.1.3"
     id("com.microsoft.azure.azurewebapp") version "1.8.1"
     id("de.undercouch.download") version "5.5.0"
